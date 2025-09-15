@@ -9,6 +9,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/.well-known/lnurlp/:username',
+        destination: 'https://lawallet.masize.com/.well-known/lnurlp/:username',
+      },
+    ]
+  },
 }
 
 export default nextConfig
